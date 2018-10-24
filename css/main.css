@@ -1,0 +1,99 @@
+h1{
+    text-align: left;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+header{
+    background-color:  rgb(183, 99, 64);
+    color: white;
+    display: flex;
+}
+
+article{
+    background-color: white;
+    height: 100%;
+    padding: 10px;
+}
+
+header, nav, main, article{
+    width: 100%;
+}
+
+main{
+    background-color: rgb(224, 146, 113);
+    padding: 20px;
+}
+
+body{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+}
+
+#some{
+    float: none;
+}
+
+#res, #re{
+    text-align: center;
+}
+
+#resc, #resca{
+    font-size: 16px;
+    text-align: center;
+}
+
+#adopcion1, #adopcion2{
+    width: 600px;
+    margin: auto;
+    display: block;
+}
+
+#ci{
+    float: none;
+}
+
+nav, footer{
+    background-color: rgb(183, 99, 64);
+    width: 100%;
+    color: white;
+    display: flex;
+    padding: 10px
+}
+
+#contacto{
+    width: 100%;
+    float: none;
+    margin: auto;
+    
+    background-color:   rgb(183, 99, 64);;
+}
+
+#cont{
+    text-align: center;
+}
+
+#der{
+    width: 100%;
+    float: none;
+    margin: auto;
+    background-color: rgb(183, 99, 64);
+}
+
+#p{
+    margin-left: 10px;
+}
+
+#info{
+    padding: 30px;
+}
+
+.container{
+    margin: auto;
+}
+
+img{
+    max-width: 100%;
+}
+

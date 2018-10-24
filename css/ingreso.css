@@ -1,0 +1,17 @@
+form{
+    padding: 10px;
+    margin: auto;
+    border: solid rgb(104, 34, 4);
+    background-color:  rgb(255, 197, 172);
+}
+
+button{
+    min-width: 40px;
+    min-height: 48px;
+}
+
+#formulario{
+    display: flex;
+    width: 100%;
+}
+

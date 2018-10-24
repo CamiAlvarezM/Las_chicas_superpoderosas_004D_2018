@@ -1,0 +1,21 @@
+header, footer{
+    width: 100%;
+}
+
+aside{
+    order: 2;
+    width: 20%;
+}
+
+nav{
+    width: 10%;
+}
+
+main{
+    order: 1;
+    width: 70%;
+}
+
+nav ul{
+    float: none;
+}
