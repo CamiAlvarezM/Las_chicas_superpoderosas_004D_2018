@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Mis Perris</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <link rel="stylesheet" href="{% static 'css/ingreso.css' %}">
+</head>
+{% block header %}
+<header>
+    <center>
+    <h2> <img id= "imgLogo" src="img/img-logo.jpg" alt="logo mis perris"/> Bienvenido a Fundación Mis Perris </h2>
+    </center>
+      <nav>
+        <ul id="menu">
+          <li><a href= "{% url 'index' %}" tabindex="1">Inicio</a></li>
+          <li><a href="{% url 'galeria' %}" tabindex="2">Galeria</a></li>
+          <li><a href="{% url 'ingreso' %}" tabindex="3">Contacto</a></li>
+          <li><a href="{% url 'nosotros' %}" tabindex="4">Todo sobre nosotros</a></li>
+        </ul>
+      </nav>
+  </header>
+{% endblock %}
+
+{% block content %}
+
+
+{% endblock %}
+
+{% block footer %}
+<footer>
+    <div> 
+        Teléfono Contacto:
+        <!-- Hipervínculo con llamada -->
+        <a href="tel:+56950192842">
+        +56 9 5 019 28 42
+        </a>
+             
+        Facebook:
+        <a href="Mis Perris Oficial">
+        MIS PERRIS OFICIAL
+        </a>
+
+        Instagram:
+        <!-- Hipervínculo con llamada -->
+        <a href="Mis Perris Oficial">
+        MIS PERRIS OFICIAL
+        </a>
+                    
+        Mail: 
+        <a href="MAIL: misperris@perris.cl">
+        misperris@perris.cl
+        </a>
+    </div>
+</footer>
+</body>
+{% endblock %}

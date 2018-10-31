@@ -1,0 +1,49 @@
+
+{% load static %}
+{% block content %}
+<head>
+  <title>Mis Perris</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="css/galeria.css">
+  <link rel="stylesheet" href="{% static 'css/galeria.css' %}">
+  <link rel="stylesheet" media="screen and (max-width: 700px)" href="{% static 'css/celu.css' %}">
+  <link rel="stylesheet" media="screen and (max-width: 500px)" href="{% static 'css/pc.css' %}">
+</head>
+<body>
+  <main>
+    <p id="galeria" >¿Quieres Adoptarnos?</p>
+  <h1 id="titulo" >PERRITOS EN ADOPCIÓN</h1>
+<div id="perritos">
+      {% for perros in perros %}
+       <div class="boxDog">
+          <p class="parrafo">
+            <img src="/media/{{ img.imgaleria1.gif }}" width="200">
+            <p>Nombre: {{ Formulario.nombre }}</p>
+            <p>Raza: {{ Formulario.raza }}</p>
+            <p>Estado: {{ Formulario.estado }}</p>
+            <p>Descripcion: {{ Formulario.desc }}</p>
+          </p>
+          {% if user.is_authenticated %}
+          <a href="{% url 'adopt' pk=Formulario.pk %}" ><button>Adoptar</button></a>
+          {% endif %}
+          {% if user.is_superuser %}
+          <a id="pencil" href="{% url 'edit_perro' pk=Formulario.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+          {% endif %}
+       </div>
+       {% endfor %}
+       {% if user.is_superuser %}
+       <div class="boxDog">
+       
+          <a href="{% url 'new_perro' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+          
+        </div>
+        {% endif %}
+   </div>
+</main>
+</body>
+</html>
+{% endblock %}
